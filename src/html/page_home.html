@@ -1,39 +1,32 @@
 <!DOCTYPE html>
 <html lang="ru">
+  <head>
+    @@include('__head.html')
+  </head>
 
-<head>
-  @@include('__head.html')
-</head>
+  <body>
+    <div class="wrapper">
+      <div style="display: none">@@include('components/sprite/sprite.svg')</div>
 
-<body>
+      <!-- BEGIN HEADER -->
+      @@include('__header.html')
+      <!-- END HEADER -->
 
-  <div class="wrapper">
+      <!-- BEGIN CONTENT -->
+      @@include('__content.html')
+      <!-- END CONTENT -->
 
-    <!-- BEGIN HEADER -->
-    @@include('__header.html')
-    <!-- END HEADER -->
+      <!-- BEGIN FOOTER -->
+      @@include('__footer.html')
+      <!-- END FOOTER -->
+    </div>
 
+    <!-- BEGIN POPUPS -->
+    @@include('__popups.html')
+    <!-- END POPUPS -->
 
-    <!-- BEGIN CONTENT -->
-    @@include('__content.html')
-    <!-- END CONTENT -->
-
-
-    <!-- BEGIN FOOTER -->
-    @@include('__footer.html')
-    <!-- END FOOTER -->
-
-  </div>
-
-  <!-- BEGIN POPUPS -->
-  @@include('__popups.html')
-  <!-- END POPUPS -->
-
-
-  <!-- BEGIN SCRIPTS -->
-  @@include('__scripts.html')
-  <!-- END SCRIPTS -->
-
-</body>
-
+    <!-- BEGIN SCRIPTS -->
+    @@include('__scripts.html')
+    <!-- END SCRIPTS -->
+  </body>
 </html>

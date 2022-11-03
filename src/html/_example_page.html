@@ -1,39 +1,30 @@
 <!DOCTYPE html>
 <html lang="ru">
+  <head>
+    @@include('__head.html')
+  </head>
 
-<head>
-  @@include('__head.html')
-</head>
+  <body>
+    <div class="wrapper">
+      <!-- BEGIN HEADER -->
+      @@include('__header.html')
+      <!-- END HEADER -->
 
-<body>
+      <!-- BEGIN CONTENT -->
+      @@include('__content.html')
+      <!-- END CONTENT -->
 
-  <div class="wrapper">
+      <!-- BEGIN FOOTER -->
+      @@include('__footer.html')
+      <!-- END FOOTER -->
+    </div>
 
-    <!-- BEGIN HEADER -->
-    @@include('__header.html')
-    <!-- END HEADER -->
+    <!-- BEGIN POPUPS -->
+    @@include('__popups.html')
+    <!-- END POPUPS -->
 
-
-    <!-- BEGIN CONTENT -->
-    @@include('__content.html')
-    <!-- END CONTENT -->
-
-
-    <!-- BEGIN FOOTER -->
-    @@include('__footer.html')
-    <!-- END FOOTER -->
-
-  </div>
-
-  <!-- BEGIN POPUPS -->
-  @@include('__popups.html')
-  <!-- END POPUPS -->
-
-
-  <!-- BEGIN SCRIPTS -->
-  @@include('__scripts.html')
-  <!-- END SCRIPTS -->
-
-</body>
-
+    <!-- BEGIN SCRIPTS -->
+    @@include('__scripts.html')
+    <!-- END SCRIPTS -->
+  </body>
 </html>
