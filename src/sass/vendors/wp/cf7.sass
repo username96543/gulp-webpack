@@ -1,0 +1,43 @@
+
+.policy
+  font-size: 10px
+  text-align: center
+  & a
+    text-decoration: underline
+
+.wpcf7
+  position: relative
+  & .wpcf7-spinner
+    position: absolute
+    right: 0
+    bottom: 0
+  & .wpcf7-form
+    position: relative
+    & .wpcf7-response-output
+      position: absolute
+      top: 0
+      left: 1rem
+      right: 1rem
+      z-index: 9
+      background: #fff
+      opacity: 0
+      visibility: hidden
+    &.sent .wpcf7-response-output,
+    &.invalid .wpcf7-response-output
+      animation: show 2.5s
+    //&.sent .wpcf7-response-output
+    //&.invalid .wpcf7-response-output
+
+@keyframes show
+  0%
+    opacity: 0
+    visibility: hidden
+  20%
+    opacity: 1
+    visibility: visible
+  80%
+    opacity: 1
+    visibility: visible
+  100%
+    opacity: 0
+    visibility: hidden

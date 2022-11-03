@@ -1,0 +1,148 @@
+@mixin padding-x($max: 1, $padding_size: $offset_global) {
+  @for $i from 0 through $max {
+    .px#{$i} {
+      padding-left: $padding_size * $i;
+      padding-right: $padding_size * $i;
+    }
+  }
+}
+
+@mixin padding-y($max: 1, $padding_size: $offset_global) {
+  @for $i from 0 through $max {
+    .py#{$i} {
+      padding-top: $padding_size * $i;
+      padding-bottom: $padding_size * $i;
+    }
+  }
+}
+
+@mixin padding-top($max: 1, $padding_size: $offset_global) {
+  @for $i from 0 through $max {
+    .pt#{$i} {
+      padding-top: $padding_size * $i;
+    }
+  }
+}
+
+@mixin padding-left($max: 1, $padding_size: $offset_global) {
+  @for $i from 0 through $max {
+    .pl#{$i} {
+      padding-left: $padding_size * $i;
+    }
+  }
+}
+
+@mixin padding-right($max: 1, $padding_size: $offset_global) {
+  @for $i from 0 through $max {
+    .pr#{$i} {
+      padding-right: $padding_size * $i;
+    }
+  }
+}
+
+@mixin padding-bottom($max: 1, $padding_size: $offset_global) {
+  @for $i from 0 through $max {
+    .pb#{$i} {
+      padding-bottom: $padding_size * $i;
+    }
+  }
+}
+
+@mixin margin-x($max: 1, $margin_size: $offset_global) {
+  @for $i from 0 through $max {
+    .mx#{$i} {
+      margin-left: $margin_size * $i;
+      margin-right: $margin_size * $i;
+    }
+  }
+}
+
+@mixin margin-x-auto {
+  .mxa {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+@mixin margin-y($max: 1, $margin_size: $offset_global) {
+  @for $i from 0 through $max {
+    .my#{$i} {
+      margin-top: $margin_size * $i;
+      margin-bottom: $margin_size * $i;
+    }
+  }
+}
+
+@mixin margin-y-auto {
+  .mya {
+    margin-top: auto;
+    margin-bottom: auto;
+  }
+}
+
+@mixin margin-top($max: 1, $margin_size: $offset_global) {
+  @for $i from 0 through $max {
+    .mt#{$i} {
+      margin-top: $margin_size * $i;
+    }
+  }
+}
+
+@mixin margin-top-auto {
+  .mta {
+    margin-top: auto;
+  }
+}
+
+@mixin margin-left($max: 1, $margin_size: $offset_global) {
+  @for $i from 0 through $max {
+    .ml#{$i} {
+      margin-left: $margin_size * $i;
+    }
+  }
+}
+
+@mixin margin-left-auto() {
+  .mla {
+    margin-left: auto;
+  }
+}
+
+@mixin margin-right($max: 1, $margin_size: $offset_global) {
+  @for $i from 0 through $max {
+    .mr#{$i} {
+      margin-right: $margin_size * $i;
+    }
+  }
+}
+
+@mixin margin-right-auto {
+  .mra {
+    margin-right: auto;
+  }
+}
+
+@mixin margin-bottom($max: 1, $margin_size: $offset_global) {
+  @for $i from 0 through $max {
+    .mb#{$i} {
+      margin-bottom: $margin_size * $i;
+    }
+  }
+}
+
+@mixin margin-bottom-auto {
+  .mba {
+    margin-bottom: auto;
+  }
+}
+
+@mixin gap($max: 1, $gap_size: $offset_global) {
+  .g {
+    gap: calc($gap_size / 2);
+  }
+  @for $i from 1 through $max {
+    .g#{$i} {
+      gap: $gap_size * $i;
+    }
+  }
+}

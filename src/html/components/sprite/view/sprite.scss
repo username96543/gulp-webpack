@@ -1,0 +1,44 @@
+%svg-common {
+    background: url("svg/sprite.view.svg") no-repeat;
+}
+
+.svg-Asset_3 {
+    @extend %svg-common;
+    background-position: 0 99.29078014184397%;
+}
+
+.svg-Asset_3-dims {
+    width: 122.23px;
+    height: 81.2px;
+}
+
+.svg-Group_113 {
+    @extend %svg-common;
+    background-position: 15.690629011553273% 70.44025157232704%;
+}
+
+.svg-Group_113-dims {
+    width: 35px;
+    height: 35px;
+}
+
+.svg-ROLLOSVIT {
+    @extend %svg-common;
+    background-position: 0 0;
+}
+
+.svg-ROLLOSVIT-dims {
+    width: 814px;
+    height: 112px;
+}
+
+.svg-qwe {
+    @extend %svg-common;
+    background-position: 19.653750000000002% 62.22222222222222%;
+}
+
+.svg-qwe-dims {
+    width: 14px;
+    height: 14px;
+}
+

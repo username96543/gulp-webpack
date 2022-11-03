@@ -1,0 +1,57 @@
+/* BEGIN GRID LAYOUT */
+
+@mixin grid() {
+  .xs-g1 { // Костыль
+    grid-auto-rows: auto;
+  }
+  @each $media-name,$map in $media {
+    $grid-columns: map-get($grid, $media-name);
+    @for $i from 1 through $grid-columns {
+      .#{$media-name}-g#{$i} {
+        @extend .xs-g1;
+      }
+    }
+  }
+  .container.dg:before,
+  .container.dg:after {
+    content: none !important;
+  }
+}
+
+
+
+@mixin grid-media($media-min, $media-max, $media-name, $amount) {
+
+  @if $media-max==0 {
+    @media (min-width: $media-min) {
+      @for $i from 1 through $amount {
+        .#{$media-name}-g#{$i} {
+          grid-template-columns: repeat(#{$i}, 1fr);
+        }
+      }
+    }
+  }
+    
+  @if $media-max>0 {
+    @media (min-width: $media-min) and (max-width: $media-max) {
+      @for $i from 1 through $amount {
+        .#{$media-name}-g#{$i} {
+          grid-template-columns: repeat(#{$i}, 1fr);
+        }
+      }
+    }
+  }
+
+}
+
+@mixin grid-init() {
+  @include grid();
+  @each $media-name,$map in $media {
+    $grid-columns: map-get($grid, $media-name);
+    @each $min, $max in $map {
+      @include grid-media($min, $max, $media-name, $grid-columns);
+    }
+  }
+}
+
+/* END GRID LAYOUT */

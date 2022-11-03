@@ -1,0 +1,92 @@
+
+//.current-lang
+//  display: none
+
+.menu-horizontal
+  display: flex
+  //justify-content: space-between
+  align-items: center
+  gap: 1rem
+  margin-bottom: 0
+  &-item-has-children > a
+    display: flex !important
+    align-items: center
+    &::before
+      content: ''
+      position: absolute
+      top: -1rem
+      left: 0
+      right: 0
+      bottom: -1rem
+    &:after
+      content: "›"
+      display: block
+      transform: rotate(90deg)
+      margin-left: 8px
+  & > li
+    position: relative
+    z-index: 1
+    & > a
+      position: relative
+      z-index: 2
+      display: flex
+      justify-content: center
+      align-items: center
+      //&:hover
+    & > ul > li > a
+      display: flex
+      justify-content: center
+      align-items: center
+    &:hover
+      z-index: 2
+      & > ul
+        visibility: visible
+        opacity: 1
+  .sub-menu
+    display: flex
+    flex-direction: column
+    gap: 1rem
+    position: absolute
+    top: calc(100% + 10px)
+    left: -12px
+    width: max-content
+    min-width: calc(100% + 24px)
+    padding: 8px
+    box-shadow: rgba(0, 0, 0, .12) 0 2px 2px
+    background: #fff
+    margin-bottom: 0
+    visibility: hidden
+    opacity: 0
+    z-index: 1
+
+.menu-sub-menu-trigger
+  .menu-item-has-children.menu-item-sub-menu-trigger
+    display: flex
+    flex-wrap: wrap
+    justify-content: space-between
+    & > .sub-menu-trigger
+      order: 2
+      font-family: monospace
+      font-size: 0.75rem
+      font-weight: 700
+      padding: 0 1rem
+      margin: 0 6px
+      transition: unset !important
+      transform: rotate(180deg)
+      &:before
+        content: ''
+        width: 10px
+        height: 100%
+        display: block
+        background: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA0NDggNTEyIj48IS0tISBGb250IEF3ZXNvbWUgUHJvIDYuMS4xIGJ5IEBmb250YXdlc29tZSAtIGh0dHBzOi8vZm9udGF3ZXNvbWUuY29tIExpY2Vuc2UgLSBodHRwczovL2ZvbnRhd2Vzb21lLmNvbS9saWNlbnNlIChDb21tZXJjaWFsIExpY2Vuc2UpIENvcHlyaWdodCAyMDIyIEZvbnRpY29ucywgSW5jLiAtLT48cGF0aCBkPSJNNDE2IDM1MmMtOC4xODggMC0xNi4zOC0zLjEyNS0yMi42Mi05LjM3NUwyMjQgMTczLjNsLTE2OS40IDE2OS40Yy0xMi41IDEyLjUtMzIuNzUgMTIuNS00NS4yNSAwcy0xMi41LTMyLjc1IDAtNDUuMjVsMTkyLTE5MmMxMi41LTEyLjUgMzIuNzUtMTIuNSA0NS4yNSAwbDE5MiAxOTJjMTIuNSAxMi41IDEyLjUgMzIuNzUgMCA0NS4yNUM0MzIuNCAzNDguOSA0MjQuMiAzNTIgNDE2IDM1MnoiLz48L3N2Zz4=) center no-repeat
+    &.active > .sub-menu-trigger
+      transform: rotate(0deg)
+    & > a
+      order: 1
+    & > .sub-menu
+      display: none
+      margin-top: 20px
+      order: 3
+      padding-left: 1rem
+    &.active > .sub-menu
+      display: block

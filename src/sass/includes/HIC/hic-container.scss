@@ -1,0 +1,108 @@
+@mixin container-offsets($type: 0, $offset: 15) {
+  @if $type == 0 {
+    .container {
+      padding-right: 15px;
+      padding-left: 15px;
+      margin-right: auto;
+      margin-left: auto;
+    }
+  }
+  .container:after,
+  .row:after,
+  .row {
+    margin-right: -15px;
+    margin-left: -15px;
+  }
+}
+
+@mixin container-margin($media-min, $media-max: 0, $width: 0, $offset: 15) {
+  @if $media-max == 0 {
+    @media (min-width: $media-min) {
+      @if $width == 0 {
+        .container {
+          width: 100%;
+        }
+      } @else {
+        .container {
+          width: $width;
+        }
+      }
+    }
+  }
+  @if $media-max > 0 {
+    @media (min-width: $media-min) and (max-width: $media-max) {
+      @if $width == 0 {
+        .container {
+          width: 100%;
+        }
+      } @else {
+        .container {
+          width: $width;
+        }
+      }
+    }
+  }
+}
+
+@mixin container-padding($media-min, $media-max: 0, $width: 0, $offset: 15) {
+  @if $media-max == 0 {
+    @media (min-width: $media-min) {
+      @if $width == 0 {
+        .container {
+          padding-left: 15px;
+          padding-right: 15px;
+        }
+      } @else {
+        .container {
+          padding-left: calc((100% - #{$width}) / 2 + 15px);
+          padding-right: calc((100% - #{$width}) / 2 + 15px);
+        }
+      }
+    }
+  }
+  @if $media-max > 0 {
+    @media (min-width: $media-min) and (max-width: $media-max) {
+      @if $width == 0 {
+        .container {
+          padding-left: 15px;
+          padding-right: 15px;
+        }
+      } @else {
+        .container {
+          padding-left: calc((100% - #{$width}) / 2 + 15px);
+          padding-right: calc((100% - #{$width}) / 2 + 15px);
+        }
+      }
+    }
+  }
+}
+
+@mixin container-offsets-init {
+  @each $media-name,$map in $media {
+    $container_value: map-get($container, $media-name);
+    @each $min, $max in $map {
+      @include container-offsets($min, $max, $container_value);
+    }
+  }
+}
+
+@mixin container-margin-init {
+  @each $media-name,$map in $media {
+    $container_value: map-get($container, $media-name);
+    @each $min, $max in $map {
+      @include container-margin($min, $max, $container_value);
+    }
+  }
+}
+
+@mixin container-padding-init {
+  .container {
+    width: 100%
+  }
+  @each $media-name,$map in $media {
+    $container_value: map-get($container, $media-name);
+    @each $min, $max in $map {
+      @include container-padding($min, $max, $container_value);
+    }
+  }
+}

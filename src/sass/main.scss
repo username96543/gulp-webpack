@@ -1,0 +1,25 @@
+/* BEGIN GENERAL */
+@import "project-vars.scss";
+/* END GENERAL */
+
+/* BEGIN FUNCTIONS */
+@import "includes/base-functions.scss";
+/* END FUNCTIONS */
+
+/* BEGIN VENDORS */
+@import "vendors.scss";
+/* END VENDORS */
+
+/* BEGIN FONTS */
+// @import "common/fonts.scss";
+/* END FONTS */
+
+/* BEGIN MIXINS */
+@import "common/mixins.sass";
+/* END MIXINS */
+
+/* BEGIN STYLES */
+@import "common/header.sass";
+@import "common/content.sass";
+@import "common/footer.sass";
+/* END STYLES */

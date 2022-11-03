@@ -1,0 +1,446 @@
+.notice {
+  &_2 {
+    border-left: 9px solid #3485b3;
+    border-radius: 3px;
+    background: #3d9cd2;
+    color: #fff;
+    text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.3);
+  }
+}
+
+.button {
+  &_1 {
+    display: inline-block;
+    background: #3d9cd2; //ffde00
+    //text-shadow: 0 0 25px rgba(0, 0, 0, 0.4);
+    text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.3);
+    border: 0;
+    border-radius: 3px;
+    padding: 0 30px;
+    height: 50px;
+    font: 700 16px/50px Montserrat;
+    letter-spacing: 1px;
+    color: #fff;
+    box-shadow: 1px 1px 0 #3485b3, 4px 4px 0 rgba(0, 0, 0, 0.1);
+
+    &:hover {
+      background: #3485b3;
+      color: #fff;
+    }
+  }
+
+  &_2 {
+    display: inline-block;
+    background: linear-gradient(45deg, #be5050, #e29090); //ffde00
+    //text-shadow: 0 0 25px rgba(0, 0, 0, 0.4);
+    text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.3);
+    border: 0;
+    border-radius: 3px;
+    padding: 0 30px;
+    height: 50px;
+    font: 700 16px/50px Montserrat;
+    letter-spacing: 1px;
+    color: #fff;
+    box-shadow: 1px 1px 0 #e3b2cd, 4px 4px 0 rgba(0, 0, 0, 0.1);
+
+    &:hover {
+      background: #e6c500;
+      color: #fff;
+    }
+  }
+
+  &_3 {
+    background: 00;
+    border: 2px solid #9a8b61;
+    padding: 0 15px;
+    height: 40px;
+    line-height: 36px;
+    font: 400 16px/36px sans-serif;
+    color: #9a8b61;
+
+    &:hover {
+      background: #9a8b61;
+      color: #fff;
+    }
+  }
+
+  &_4 {}
+}
+
+.form {
+  &_1 {
+
+    & input[type="text"],
+    & input[type="email"],
+    & input[type="tel"],
+    & input[type="password"],
+    & textarea {
+      width: 100%;
+      padding: 0 15px;
+      border: 0;
+      border-left: 5px solid #3485b3;
+      border-bottom: 1px solid #ddd;
+      font: 400 16px/40px sans-serif;
+      background: 00;
+    }
+
+    & input[type="text"]::placeholder,
+    & input[type="email"]::placeholder,
+    & input[type="tel"]::placeholder,
+    & input[type="password"]::placeholder,
+    & textarea::placeholder {
+      color: #3d9cd2;
+    }
+  }
+
+  &_2 {
+    background: rgba(255, 255, 255, 0.9);
+    padding: 20px 25px;
+    border-radius: 5px;
+
+    @media (max-width: 1199px) {
+      padding: 15px 25px;
+    }
+
+    &.second {
+      background: rgba(0, 0, 0, 0.1);
+      box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.1);
+
+      & .title {}
+    }
+
+    &__title {
+      text-transform: uppercase;
+      font: 600 29px/1.4 Oswald, sans-serif;
+      color: #5d9200;
+      border-bottom: 1px dashed #5d9200;
+      margin-bottom: 15px;
+      padding-bottom: 10px;
+      text-align: center;
+
+      @media (max-width: 1199px) {
+        font: 600 24px/1.4 Oswald, sans-serif;
+      }
+
+      @media (max-width: 991px) {
+        font: 600 17px/1.4 Oswald, sans-serif;
+      }
+    }
+
+    & input[type="text"],
+    & input[type="email"],
+    & input[type="tel"],
+    & input[type="password"],
+    & textarea {
+      height: 44px;
+      width: 100%;
+      padding: 0 17px;
+      border: 0px;
+      border-radius: 2px;
+      background: #fff;
+      box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.3);
+      margin: 0 0 10px;
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 14px;
+      color: #747474;
+      line-height: normal;
+      position: relative;
+    }
+
+    & input[type="submit"] {
+      height: 44px;
+      background: #5d9200;
+      color: #fff;
+      border-radius: 2px;
+      -moz-border-radius: 10px;
+      -o-border-radius: 10px;
+      box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.4);
+      -moz-box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.4);
+      -o-box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.4);
+      text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
+      -moz-text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
+      -o-text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
+      cursor: pointer;
+      width: 100%;
+      font-family: Oswald;
+      border: 0px;
+      font-size: 18px;
+      margin: 5px 0;
+      position: relative;
+      text-align: center;
+    }
+  }
+
+  &_3 {
+    max-width: 290px;
+
+    & label {
+      display: flex;
+      cursor: text;
+    }
+
+    & fieldset {
+      display: block;
+      width: 100%;
+      padding: 0;
+      border: 1px solid #e2e2e2;
+      margin: 0;
+      margin-bottom: 10px;
+      border-radius: 2px;
+    }
+
+    & legend {
+      margin-left: 30px;
+      padding: 0 8px;
+      font: 600 10px/1 sans-serif;
+      text-transform: uppercase;
+      color: #666;
+    }
+
+    & input[type="text"],
+    & input[type="email"],
+    & input[type="tel"],
+    & input[type="password"],
+    & textarea {
+      display: flex;
+      width: 100%;
+      border: 0;
+      padding: 10px 15px;
+      font: 400 18px/1 sans-serif;
+      background: 00;
+
+      &::placeholder {
+        color: #666;
+      }
+    }
+
+    & input[type="submit"] {
+      width: 100%;
+      margin-top: 5px;
+      font: 400 18px/50px sans-serif;
+      background: radial-gradient(#c66ee2, #a065b3);
+      border: 0;
+      border-radius: 2px;
+      color: #fff;
+    }
+  }
+
+  &_4 {
+    padding: 20px 25px;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 5px;
+
+    @media (max-width: 1199px) {
+      padding: 15px 25px;
+    }
+
+    &.second {
+      background: #f2f2f2;
+      box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.1);
+
+      & .title {}
+    }
+
+    &__title {
+      text-transform: uppercase;
+      font: 600 29px/1.4 Oswald, sans-serif;
+      color: #5d9200;
+      border-bottom: 1px dashed #5d9200;
+      margin-bottom: 15px;
+      padding-bottom: 10px;
+      text-align: center;
+
+      @media (max-width: 1199px) {
+        font: 600 24px/1.4 Oswald, sans-serif;
+      }
+
+      @media (max-width: 991px) {
+        font: 600 17px/1.4 Oswald, sans-serif;
+      }
+    }
+
+    & label {
+      display: flex;
+      cursor: text;
+      margin-bottom: 10px;
+    }
+
+    & fieldset {
+      display: block;
+      width: 100%;
+      padding: 0;
+      border: 0;
+      margin: 0;
+      border-radius: 2px;
+      background: #fff;
+    }
+
+    & legend {
+      margin-left: 20px;
+      padding: 4px 8px;
+      font: 600 10px/1 sans-serif;
+      font-family: $font_form_2;
+      text-transform: uppercase;
+      color: tint($color_1, 70);
+      background: #fff;
+      border-radius: 2px;
+    }
+
+    & input[type="text"],
+    & input[type="email"],
+    & input[type="tel"],
+    & input[type="password"],
+    & textarea {
+      display: flex;
+      width: 100%;
+      border: 0;
+      padding: 10px 15px;
+      font: 400 18px/1 sans-serif;
+      font-family: $font_form_2;
+      background: 00;
+    }
+
+    & input[type="text"]::placeholder,
+    & input[type="email"]::placeholder,
+    & input[type="tel"]::placeholder,
+    & input[type="password"]::placeholder,
+    & textarea::placeholder {
+      color: #777;
+    }
+
+    & input[type="submit"] {
+      width: 100%;
+      margin-top: 5px;
+      font: 400 18px/50px sans-serif;
+      font-family: $font_form_1;
+      text-transform: uppercase;
+      background: radial-gradient(tint($color_1, 72) 30%, $color_1);
+      border: 0;
+      border-radius: 2px;
+      color: #fff;
+    }
+
+    & label,
+    & input[type="submit"] {
+      filter: drop-shadow(0px 2px 3px rgba(0, 0, 0, 0.3));
+      transition: 0.2s;
+
+      &:focus-within,
+      &:hover {
+        filter: drop-shadow(0px 2px 3px rgba(109, 146, 0, 0.8));
+      }
+    }
+  }
+
+  &_0 {
+
+    & input[type="text"],
+    & input[type="email"],
+    & input[type="tel"],
+    & input[type="password"],
+    & textarea {
+      border: 0;
+      font: 400 16px/40px sans-serif;
+      display: flex;
+      width: 100%;
+        height: 70px;
+        padding: 0 25px;
+        background: #FFFFFF;
+        box-shadow: 0px 14.7531px 54.5863px rgba(133, 135, 138, 0.15);
+        border-radius: 9px;
+    }
+
+    & input[type="text"]::placeholder,
+    & input[type="email"]::placeholder,
+    & input[type="tel"]::placeholder,
+    & input[type="password"]::placeholder,
+    & textarea::placeholder {
+      color: #666
+    }
+  }
+}
+
+/*
+<div class="form_3">
+  <label>
+    <fieldset>
+      <legend align="left">Ваше имя</legend>
+      <input type="text" placeholder="Введите имя">
+    </fieldset>
+  </label>
+  <label>
+    <fieldset>
+      <legend align="left">Ваша фамилия</legend>
+      <input type="text" placeholder="Введите фамилию">
+    </fieldset>
+  </label>
+  <input type="submit" value="Отправить">
+</div>
+*/
+
+/* BEGIN CUSTOM SELECT */
+
+.select {
+  &_1 {
+    position: relative;
+    z-index: 1;
+    height: 30px;
+
+    & input {
+      display: none;
+    }
+
+    & label {
+      position: relative;
+      display: flex;
+      align-items: center;
+      width: 100%;
+      height: 30px;
+      background: #ccc;
+    }
+
+    & label:hover,
+    & input:checked+label {
+      background: #07c;
+      color: #fff;
+    }
+
+    & summary {
+      display: block;
+    }
+
+    & summary::-webkit-details-marker {
+      display: none;
+    }
+
+    & summary:after {
+      content: " ▲";
+    }
+
+    &[open] summary:after {
+      content: " ▼";
+    }
+  }
+}
+
+/*
+HTML
+<details class="select_1" onchange="customSelect(this)">
+  <summary>Текст</summary>
+  <input id="select_1__1" type="radio" name="city" value="one">
+  <label for="select_1__1">One</label>
+  <input id="select_1__2" type="radio" name="city" value="two">
+  <label for="select_1__2">Two</label>
+  <input id="select_1__3" type="radio" name="city" value="three">
+  <label for="select_1__3">Three</label>
+</details>
+JAVASCRIPT
+function customSelect(element) {
+  console.log(element)
+  element.open = (element.open) ? false : true;
+  element.querySelector('summary').innerText = element.querySelector('input:checked + label').innerText;
+}
+*/
+
+/* END CUSTOM SELECT */
+

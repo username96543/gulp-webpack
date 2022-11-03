@@ -1,0 +1,136 @@
+
+/*
+  HTML INLINE CLASSES
+*/
+
+/* BEGIN MEDIA */
+$media: (
+  //xl: (1440px:0),
+  lg: (1280px:0),
+  md: (992px:1279px),
+  sm: (768px:991px),
+  xs: (320px:767px)
+);
+/* END MEDIA */
+
+/* BEGIN CONTAINER */
+$container: (
+  xl: 1370px,
+  lg: 1230px,
+  md: 960px,
+  sm: 740px,
+  xs: 0
+);
+//@include container-offsets-init();
+//@include container-margin-init();
+@include container-padding-init();
+/* END CONTAINER */
+
+/* BEGIN WIDTH HEIGHT */
+@include width();
+@include width-max-content();
+@include width-min-content();
+@include height();
+@include viewport-height();
+@include height-max-content();
+@include height-min-content();
+/* END WIDTH HEIGHT */
+
+// BEGIN HEIGHT ASPECT-RATIO
+$height-aspect-ratio:
+  (1:1),
+  (16:8),
+  (4:3),
+  (8:16),
+  (3:4),
+  (5:4),
+  (5:3)
+;
+@include height-aspect-ratio-init(); // .h_16-9
+/* END WIDTH HEIGHT */
+
+/* BEGIN PADDING MARGIN GAP */
+@include padding-x(4);
+@include padding-y(8);
+@include padding-top(2);
+@include padding-left(2);
+@include padding-right(2);
+@include padding-bottom(2);
+//@include margin-x(4);
+@include margin-x-auto();
+//@include margin-y();
+@include margin-y-auto();
+@include margin-top(6);
+@include margin-top-auto();
+@include margin-left(3);
+@include margin-left-auto();
+@include margin-right(3);
+@include margin-right-auto();
+@include margin-bottom(6);
+@include margin-bottom-auto();
+@include gap(4);
+/* END PADDING MARGIN GAP */
+
+/* BEGIN GRID LAYOUT */
+$grid: (
+  xl: 6,
+  lg: 6,
+  md: 6,
+  sm: 6,
+  xs: 4
+);
+@include grid-init();
+/* END GRID LAYOUT */
+
+/* BEGIN FLEX COLUMNS */
+$flex: (
+  xl: 4,
+  lg: 4,
+  md: 4,
+  sm: 2,
+  xs: 2
+);
+//@include flex-columns-init();
+/* END FLEX COLUMNS */
+
+/* BEGIN Z-INDEX */
+@include z-index(3);
+/* END Z-INDEX */
+
+/* BEGIN ORDER LAYOUT */
+$orders: (
+  xl: 0,
+  lg: 0,
+  md: 0,
+  sm: 0,
+  xs: 2
+);
+@include order-init();
+/* END ORDER LAYOUT */
+
+/* BEGIN DISPLAY NONE */
+$none: (
+  xl: true,
+  lg: true,
+  md: true,
+  sm: true,
+  xs: true
+);
+@include none-init();
+/* END DISPLAY NONE */
+
+/* BEGIN EMMET */
+@include emmet();
+/* END EMMET */
+
+/* BEGIN BASE STYLES */
+@include base-styles();
+@include fix-footer();
+@include spread();
+//@include video-box();
+@include anchor($offset_global * (-6));
+//@include circle();
+@include overflow-hidden();
+@include visibility-hidden();
+@include modal();
+/* END BASE STYLES */

@@ -1,0 +1,23 @@
+/* BEGIN INCLUDES */
+@import "includes/destyle.scss";
+@import "includes/typography-styles.scss";
+@import "includes/base-styles.scss";
+@import "includes/custom-forms.scss";
+@import "includes/HIC/hic-mixins.scss";
+@import "includes/HIC/hic-container.scss";
+@import "includes/HIC/hic-offsets.scss";
+@import "includes/HIC/hic-grid-layout.scss";
+//@import "includes/HIC/hic-flexbox.sass";
+@import "includes/HIC/hic-emmet.sass";
+@import "includes/HIC/hic-width-height.scss";
+@import "hic-settings.scss";
+/* END INCLUDES */
+
+//@import "vendors/fancybox.scss";
+//@import "vendors/slick.scss";
+@import "vendors/swiper.min.scss";
+
+@import "vendors/wp/admin-bar.sass";
+@import "vendors/wp/menu.sass";
+@import "vendors/wp/cf7.sass";
+@import "vendors/wp/favorites.sass";

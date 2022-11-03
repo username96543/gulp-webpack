@@ -1,0 +1,38 @@
+/* BEGIN PADDING MARGIN GAP REM */
+$offset_global: 16px; // PADDING, MARGIN, GAP
+body {
+  font-size: $offset_global; // REM
+}
+/* END PADDING MARGIN GAP REM */
+
+/* BEGIN COLORS */
+$color-1: green;
+$color-2: blue;
+$color_text: #16212f;
+$color_accent: #4A7EFF;
+$color_general: #0E1D4A;
+$color_additional: #fff;
+$color_copyright: #566180;
+
+$background-linear: linear-gradient(305.67deg, #57F6BD -6.35%, #4A7EFF 100%);
+$background-linear-turn: linear-gradient(55deg, #57F6BD -6.35%, #4A7EFF 100%);
+
+$background_brend: #F2EDE8;
+/* END COLORS */
+
+/* BEGIN FONTS */
+$font_1: 'Roboto',
+serif;
+$font_2: 'Montserrat',
+serif;
+$font_3: 'Montserrat',
+sans-serif;
+
+$font-form-1: $font_1;
+$font-form-2: $font_2;
+/* END FONTS */
+
+/* BEGIN TRANSITION */
+$transition_1: 0.2s;
+$transition_2: 0.4s;
+/* END TRANSITION */

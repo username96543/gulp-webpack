@@ -1,0 +1,31 @@
+
+/* <i class="sf-icon-love"></i> */
+
+.simplefavorite-button
+  display: inline-flex
+  padding-top: 0
+  padding-bottom: 0
+  border: 0
+  background: 00
+  outline: 0!important
+  font-size: 0.8rem
+  transition: unset !important
+  &:not(.active) i
+    color: #777
+  &.active i
+    color: red
+  &.loading
+    font-size: 0 !important
+    &:before
+      content: "\e87d"
+      font-family: 'favorites' !important
+      font-size: 0.8rem !important
+      font-style: normal
+      font-weight: normal
+      font-variant: normal
+      text-transform: none
+      line-height: 1
+    &:not(.active):before
+      color: red
+    &.active:before
+      color: #777

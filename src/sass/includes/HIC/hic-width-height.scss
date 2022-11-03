@@ -1,0 +1,60 @@
+@mixin width {
+  .w {
+    width: 100%;
+  }
+}
+@mixin width-max-content {
+  .wmax {
+    width: max-content;
+  }
+}
+@mixin width-min-content {
+  .wmin {
+    width: min-content;
+  }
+}
+
+@mixin height {
+  .h {
+    height: 100%;
+  }
+}
+
+@mixin viewport-height {
+  .vh {
+    height: 100vh;
+  }
+}
+
+@mixin height-max-content {
+  .hmax {
+    height: max-content;
+  }
+}
+
+@mixin height-min-content {
+  .hmin {
+    height: min-content;
+  }
+}
+
+@mixin height-aspect-ratio($width, $height) {
+  .h_#{$width}-#{$height} {
+    &:before {
+      content: "";
+      display: block;
+      width: 100%;
+      padding-top: calc(($height / $width) * 100%);
+    }
+  }
+}
+
+@mixin height-aspect-ratio-init {
+  @each $aspect-ratio-item in $height-aspect-ratio {
+    @each $key, $value in $aspect-ratio-item {
+      @if $key != 0 {
+        @include height-aspect-ratio($key, $value);
+      }
+    }
+  }
+}

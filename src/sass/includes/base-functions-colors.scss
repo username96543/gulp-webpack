@@ -1,0 +1,66 @@
+/* 
+
+  Избранное:
+
+  Создаёт цвет на основе оттенка, насыщенности и яркости (и альфа-канала).
+  hsla($hue, $saturation, $lightness, $alpha)
+  Получает оттенок/насыщенность/яркость цвета
+  hue($color), saturation($color), lightness($color)
+  Изменяет цвет на основе исходного цвета
+  scale-color($color, [$red], [$green], [$blue], [$saturation], [$lightness], [$alpha])
+  scale-color($color,$lightness:-20%)
+  Линейно и равномерно осветляет/затемняет пропорции цвета в процентах
+  tint($color, $percentage), shade($color, $percentage)
+
+
+
+  Стандартные и кастомные цветовые функции SASS в проекте:
+
+  rgb($red, $green, $blue)
+  Создаёт цвет из значений красного, зелёного и синих цветов (и альфа-канала).
+  rgba($red, $green, $blue, $alpha)
+  Получить значение красного/зеленого/синего в цвете.
+  red($color), green($color), blue($color)
+  hsl($hue, $saturation, $lightness)
+  Создаёт цвет на основе оттенка, насыщенности и яркости (и альфа-канала).
+  hsla($hue, $saturation, $lightness, $alpha)
+  Получает оттенок/насыщенность/яркость цвета
+  hue($color), saturation($color), lightness($color)
+  Смешать 2 цвета вместе.
+  mix($color1, $color2, [$weight]) $weight — пропорции смешивания
+  adjust-hue($color, $degrees)
+  Регулировка различных параметров цвета.
+  adjust-color($color, [$red], [$green], [$blue], [$hue], [$saturation], [$lightness], [$alpha])
+  adjust-color($color,$hue:40)
+  смешивание моделей rgb и hsl недопустимо
+  Изменяет цвет на основе исходного цвета
+  scale-color($color, [$red], [$green], [$blue], [$saturation], [$lightness], [$alpha])
+  scale-color($color,$lightness:-20%)
+  Дополнительный (противоположный) цвет передаваемого цвета.
+  complement($color), invert($color)
+  Привести цвет оттенкам серого.
+  grayscale($color)
+  Осветляет, затемняет цвет по кривой - слишком быстро и не равномерной пропорции
+  lighten($color, $amount), darken($color, $amount)
+  Тоже, что и lighten/darken, только линейно и равномерно осветляет/затемняет пропорции цвета в процентах
+  tint($color, $percentage), shade($color, $percentage)
+  Сделать цвет более/менее насыщенным.
+  saturate($color, $amount), desaturate($color, $amount)
+  Получает степень прозрачности (альфа значение)
+  alpha($color), opacity($color)
+  transparentize($color, $amount) / fade-out($color, $amount)
+  Регулирует прозрачность цвета
+  opacify($color, $amount) / fade-in($color, $amount)
+  Преобразует цвет в формат rgb и добавляет альфа-канал
+  rgba($color, $alpha)
+
+*/
+
+// Осветляет $color смешивая его с белым цветом
+@function tint($color, $percentage) {
+  @return mix(#fff, $color, 100% - $percentage);
+}
+// Затемняет $color смешивая его с черным цветом
+@function shade($color, $percentage) {
+  @return mix(#000, $color, $percentage);
+}
