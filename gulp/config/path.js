@@ -15,7 +15,8 @@ export const path = {
     files: `${buildFolder}/assets/files/`,
   },
   src: {
-    html: `${srcFolder}/html/*.html`,
+    html: [`${srcFolder}/html/*.html`, "!" + `${srcFolder}/html/_*.html`],
+    //html: [`${srcFolder}/wordpress/**/*.*`, "!" + `${srcFolder}/wordpress/**/_*.*`],
     sass: `${srcFolder}/sass/main.scss`,
     //sass: [`${srcFolder}/sass/common.sass`, `${srcFolder}/sass/vendors.sass`],
     //js: `${srcFolder}/js/main.js`,
@@ -30,7 +31,7 @@ export const path = {
     //svgicons: `${srcFolder}/svgicons/**/*.svg`,
   },
   watch: {
-    html: `${srcFolder}/html/**/*.html`,
+    html: `${srcFolder}/html/**/*.*`,
     sass: `${srcFolder}/sass/**/*.*`,
     js: `${srcFolder}/js/**/*.js`,
     img: `${srcFolder}/img/**/*.{jpg,jpeg,png,gif,webp}`,
