@@ -20,12 +20,18 @@ import { scss } from "./gulp/tasks/sass.js";
 import { js } from "./gulp/tasks/js.js";
 import { img } from "./gulp/tasks/img.js";
 import { svg } from "./gulp/tasks/svg.js";
-import { otfToTtf, ttfToWoff, fontsStyle } from "./gulp/tasks/fonts.js";
+import {
+  otfToTtf,
+  ttfToWoff,
+  woffDest,
+  fontsBase64,
+} from "./gulp/tasks/fonts.js";
 
 // Наблюдатель за изменениями в файлах
 function watcher() {
   gulp.watch(path.watch.files, copy);
-  gulp.watch(path.watch.html, html);
+  //gulp.watch(path.watch.html, html);
+  gulp.watch(path.watch.html).on("change", html); // Для SFTP загрузки отред. файла
   gulp.watch(path.watch.sass, scss);
   gulp.watch(path.watch.js, js);
   gulp.watch(path.watch.img, img);
@@ -33,7 +39,7 @@ function watcher() {
 }
 
 // Последовательная обработка шрифтов
-const fonts = gulp.series(otfToTtf, ttfToWoff, fontsStyle);
+const fonts = gulp.series(otfToTtf, ttfToWoff, woffDest, fontsBase64);
 
 // Основные задачи
 const mainTasks = gulp.series(
