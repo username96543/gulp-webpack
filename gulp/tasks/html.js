@@ -6,6 +6,8 @@ import versionNumber from "gulp-version-number";
 
 export const html = (file) => {
   let path = app.path.src.html;
+  
+  // Для gulp watch onchange
   if (typeof file !== "function") {
     path = `./${file}`;
 
