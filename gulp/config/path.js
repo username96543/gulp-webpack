@@ -32,6 +32,7 @@ export const path = {
   },
   watch: {
     html: `${srcFolder}/html/**/*.*`,
+    //html: `${srcFolder}/wordpress/**/*.*`,
     sass: `${srcFolder}/sass/**/*.*`,
     js: `${srcFolder}/js/**/*.js`,
     img: `${srcFolder}/img/**/*.{jpg,jpeg,png,gif,webp}`,
